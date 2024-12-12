@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/vertical-shot-pathway-middle-grassy-field-with-trees-cloudy-sky.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/1822494fd9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="start">
+      <div id="first">
+        <p class="txt" id="welcome">
+          Welcome to Weather App <i class="fa-solid fa-cloud"></i>
+        </p>
+      </div>
+      <div id="main1">
+        <div id="sec1">
+          <p class="text">Please Enter Your Fav City</p>
+          <div class="search">
+            <input
+              style="margin: 0em"
+              type="text"
+              name=""
+              id="val"
+              placeholder="Enter the city here"
+            />
+            <button id="sub" onclick="weather()">Submit</button>
+          </div>
+          <div class="sec3">
+            <p class="text1" id="txt1"></p>
+            <p class="text1" id="date"></p>
+            <p class="text1" id="time"></p>
+            <p class="text1" id="weathe"></p>
+            <p class="text1" id="hot"></p>
+            <p class="text1" id="conditoin"></p>
+          </div>
+        </div>
+      </div>
+      <footer>Enjoy Your Day!!!</footer>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
