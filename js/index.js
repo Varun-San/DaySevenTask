@@ -1,6 +1,4 @@
 function weather() {
-  // let value = document.getElementById("sub");
-  // console.log(value);
   let key = "2b6c4af07f57c2ccf98db18010b30054";
   let hot = document.getElementById("hot");
   let temp;
@@ -12,7 +10,7 @@ function weather() {
   let city = document.getElementById("txt1");
   let da = document.getElementById("date");
   let val = document.getElementById("val").value;
-  let conditoin = document.getElementById("conditoin");
+  let condition = document.getElementById("condition");
 
   clearInterval(set);
   set = setInterval(() => {
@@ -50,7 +48,7 @@ function weather() {
       } else if (weatherMain == "clouds") {
         hot.textContent = "Your in chill condition Enjoy the Day🤗";
       } else if (weatherMain == "mist") {
-        hot.textContent = "It's misty! Enjoy the calm and cool weather 🤗";
+        hot.textContent = "It's misty! Enjoy the calm and cool weather ⛱️";
       } else if (weatherMain == "clear") {
         hot.textContent = `It's a bright sunny day! Enjoy the sunshine 🌞`;
       } else if (weatherMain == "Snow") {
