@@ -66,13 +66,7 @@ function weather() {
     })
     .catch(() => {
       console.log("error");
-      if (val == "") {
-        alert("Enter the City Name");
-        city.textContent = "";
-        weathe2.textContent = "";
-        time2.textContent = "";
-      } else {
-        return;
-      }
+      city.textContent = "Please Enter the city name properly";
+      alert("Please Enter the city name properly");
     });
 }
