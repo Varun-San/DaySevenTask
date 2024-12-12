@@ -39,16 +39,16 @@ function weather() {
       let weatherMain = weatherCondition.main;
       let weatherDescription = weatherCondition.description;
       let weatherIcon = weatherCondition.icon;
-      conditoin.textContent = `Weather : "${weatherMain}" About the Weather "${weatherDescription}"`;
+      condition.textContent = `Weather : "${weatherMain}" About the Weather "${weatherDescription}"`;
       temp = Math.round(Number(data.main.temp - 273));
-      weather.textContent = `Current Weather : ${temp} °C Stay safe and enjoy your day! 🌤️`;
+      weather.textContent = `Current Weather : ${temp}°C Stay safe and enjoy your day! 🌤️`;
       if (weatherMain == "rain") {
         hot.textContent =
           "You're in rain! Please wear a raincoat and stay safe ❤️";
       } else if (weatherMain == "clouds") {
         hot.textContent = "Your in chill condition Enjoy the Day🤗";
       } else if (weatherMain == "mist") {
-        hot.textContent = "It's misty! Enjoy the calm and cool weather ⛱️";
+        hot.textContent = "It's misty! Enjoy the calm and cool weather 🤗";
       } else if (weatherMain == "clear") {
         hot.textContent = `It's a bright sunny day! Enjoy the sunshine 🌞`;
       } else if (weatherMain == "Snow") {
