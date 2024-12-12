@@ -49,7 +49,7 @@ function weather() {
         hot.textContent =
           "You're in rain! Please wear a raincoat and stay safe ❤️";
       } else if (weatherMain == "clouds") {
-        hot.textContent = "Your in chill condition Enjoy the Day🤗";
+        hot.textContent = "Your in chill condition Enjoy the Day 🤗";
       } else if (weatherMain == "mist") {
         hot.textContent = "It's misty! Enjoy the calm and cool weather 🤗";
       } else if (weatherMain == "clear") {
@@ -67,6 +67,7 @@ function weather() {
     })
     .catch(() => {
       console.log("error");
+      alert("Please Enter the city name properly");
       city.textContent = "Please Enter the city name properly";
     });
 }
