@@ -25,8 +25,6 @@ function weather() {
     date.getMonth() + 1
   }/${date.getFullYear()} `;
   city.textContent = `Your Fav city : ${val}`;
-
-  //   console.log(time);
   let prom = fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${val}&appid=${key}`
   );
