@@ -10,13 +10,16 @@ function weather() {
   let city = document.getElementById("txt1");
   let da = document.getElementById("date");
   let val = document.getElementById("val").value;
-  let condition = document.getElementById("condition");
+  let conditoin = document.getElementById("conditoin");
 
   clearInterval(set);
   set = setInterval(() => {
     let date2 = new Date();
     let tiem = document.getElementById("time");
-    tiem.textContent = `Current Time : ${date2.getHours()}:${date2.getMinutes()}`;
+    let hours = date2.getHours();
+    let minutes = date2.getMinutes();
+    let formattedTime = `${hours}:${minutes < 10 ? "0" + minutes : minutes}`;
+    tiem.textContent = `Current Time : ${formattedTime}`;
   }, 1000);
   da.textContent = `Current Date : ${date.getDate()}/${
     date.getMonth() + 1
@@ -39,9 +42,9 @@ function weather() {
       let weatherMain = weatherCondition.main;
       let weatherDescription = weatherCondition.description;
       let weatherIcon = weatherCondition.icon;
-      condition.textContent = `Weather : "${weatherMain}" About the Weather "${weatherDescription}"`;
+      conditoin.textContent = `Weather : "${weatherMain}" About the Weather "${weatherDescription}"`;
       temp = Math.round(Number(data.main.temp - 273));
-      weather.textContent = `Current Weather : ${temp}°C Stay safe and enjoy your day! 🌤️`;
+      weather.textContent = `Current Weather : ${temp} °C Stay safe and enjoy your day! 🌤️`;
       if (weatherMain == "rain") {
         hot.textContent =
           "You're in rain! Please wear a raincoat and stay safe ❤️";
@@ -65,6 +68,5 @@ function weather() {
     .catch(() => {
       console.log("error");
       city.textContent = "Please Enter the city name properly";
-      alert("Please Enter the city name properly");
     });
 }
